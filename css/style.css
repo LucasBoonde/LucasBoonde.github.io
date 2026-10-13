@@ -142,9 +142,10 @@ ul, ol { list-style: none; }
   align-self: start;
   margin-top: 6vh;
 }
-.hero__lead span, .hero__note span { display: block; white-space: nowrap; }
-.hero__lead span:nth-child(1) { padding-left: 3.2em; }
-.hero__lead span:nth-child(3) { padding-left: 1.6em; }
+.hero__note span { display: block; white-space: nowrap; }
+.hero__lead { display: grid; gap: 0.7em; text-align: left; }
+@media (min-width: 901px) { .hero__degrees { white-space: nowrap; } }
+.hero__tagline { font-size: 0.62em; font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; color: #2a3350; max-width: 17em; }
 
 .hero__specs {
   grid-column: 3; grid-row: 1;
@@ -416,7 +417,6 @@ section[id] { scroll-margin-top: 76px; }
   }
   .hero__lead, .hero__specs, .hero__object, .hero__card, .hero__note, .hero__name { grid-column: 1; grid-row: auto; }
   .hero__lead { margin-top: 0; font-size: 1.5rem; }
-  .hero__lead span { white-space: normal; }
   .hero__specs { justify-self: start; margin-top: 0; }
   .hero__object { width: min(86vw, 380px); margin: -24px 0 -6vw; order: 3; }
   .hero__card { justify-self: start; margin-right: 0; order: 4; margin-top: -40px; }
