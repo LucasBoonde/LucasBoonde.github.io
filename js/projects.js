@@ -33,11 +33,26 @@ const PROJECTS = [
     ],
     gallery: [
       ["assets/img/thesis-1.jpg", "MES dashboard"],
-      ["assets/img/thesis-2.jpg", "Line configurator: drag resources onto the floor and connect them"],
+      [
+        "assets/img/thesis-2.jpg",
+        "Line configurator: drag resources onto the floor and connect them",
+      ],
+      [
+        "assets/mp4/CutomConfigMobile.mp4",
+        "Video showing different phone configurations.",
+      ],
       ["assets/img/thesis-3.jpg", "System architecture"],
-      ["assets/img/thesis-4.jpg", "Information model for products and resources"],
+      [
+        "assets/img/thesis-4.jpg",
+        "Information model for products and resources",
+      ],
     ],
-    links: [["Source code", "https://github.com/JepKri21/VT4-Modular-Structure/tree/main"]],
+    links: [
+      [
+        "Source code",
+        "https://github.com/JepKri21/VT4-Modular-Structure/tree/main",
+      ],
+    ],
   },
   {
     id: "pomodoro-desk-lamp",
@@ -46,13 +61,20 @@ const PROJECTS = [
     year: "2025 – now",
     summary:
       "A focus timer you feel instead of watch. The light dims as the session runs out and changes colour when it is time for a break.",
-    tags: ["ESP32", "Embedded C++", "CAD", "3D printing", "Product design"],
-    cover: "assets/img/lamp-1.jpg",
+    tags: [
+      "ESP32",
+      "Embedded C++",
+      "CAD",
+      "3D printing",
+      "Product design",
+      "Arduino",
+    ],
+    cover: "assets/img/ImageClean.png",
     facts: [
       ["Context", "Self-initiated, BONDe CREATIONS"],
       ["Role", "Everything: electronics, firmware, CAD, printing"],
       ["Status", "Version 2.1"],
-      ["Stack", "ESP32, RGB light, display, 3D printed enclosure"],
+      ["Stack", "ESP32, Arduino, RGB light, display, 3D printed enclosure"],
     ],
     sections: [
       {
@@ -69,9 +91,17 @@ const PROJECTS = [
       },
     ],
     gallery: [
-      ["assets/img/lamp-1.jpg", "Version 2.1 in focus mode"],
-      ["assets/img/lamp-2.jpg", "Fresh off the printer"],
-      ["assets/img/lamp-3.jpg", "Cross-section of two shade variants"],
+      [
+        "assets/img/PDLHeroBlue.png",
+        "Pomodoro Desk Lamp render of Blue setting",
+      ],
+      ["assets/img/lamp-2.jpg", "Assembled Lamp"],
+      ["assets/img/PDLFocus.png", "Assembled Lamp"],
+      ["assets/img/ImageClean.png", "Assembled Lamp"],
+      [
+        "assets/img/PDLTopRed.png",
+        "Adjustable timer and colorvariations for both focus and relax mode",
+      ],
     ],
     links: [],
   },
@@ -144,11 +174,20 @@ const PROJECTS = [
     gallery: [
       ["assets/img/cones-1.jpg", "Synthetic scene rendered in Blender"],
       ["assets/img/cones-2.jpg", "Predicted keypoints on synthetic data"],
-      ["assets/img/cones-3.jpg", "Predicted keypoints on the 3D printed model, stereo camera view"],
+      [
+        "assets/img/cones-3.jpg",
+        "Predicted keypoints on the 3D printed model, stereo camera view",
+      ],
     ],
     links: [
-      ["Pose estimation code", "https://github.com/LucasBoonde/P6AircraftPoseEstimation"],
-      ["Blender annotation script", "https://github.com/LucasBoonde/AutonomousKeypointAnnotation"],
+      [
+        "Pose estimation code",
+        "https://github.com/LucasBoonde/P6AircraftPoseEstimation",
+      ],
+      [
+        "Blender annotation script",
+        "https://github.com/LucasBoonde/AutonomousKeypointAnnotation",
+      ],
     ],
   },
   {
@@ -175,18 +214,55 @@ const PROJECTS = [
         body: "A vault discipline with timing-based input for keyboard and touch, a camera director that follows each run, interchangeable scoring models (a simple one and one based on the official rules), a competition mode that evaluates a whole team round, and data-driven configuration for disciplines, equipment and team members.",
       },
     ],
-    gallery: [["assets/img/tgc-1.jpg", "Vault and trampette setup in the gym scene"]],
+    gallery: [
+      ["assets/img/tgc-1.jpg", "Vault and trampette setup in the gym scene"],
+    ],
     links: [],
   },
 ];
 
 // Shorter entries shown in the archive table.
 const ARCHIVE = [
-  ["2025", "UNS-driven modular demonstrator", "Small-batch production line on B&R ACOPOS 6D levitating shuttles, with multi-shuttle path planning (A*, conflict-based search), in-process anomaly detection and predictive maintenance.", "MSc, 8th semester"],
-  ["2025", "Screw type detection on Jetson Nano", "Real-time detection and classification of four screw types, from data capture and labelling to deployment on the device.", "Applied Machine Vision"],
-  ["2024", "3D scanning of carbon composites", "Prototype scanning vehicle and error-detection software for quality control of wind turbine blade beams. With Siemens Gamesa.", "MSc, 7th semester"],
-  ["2023", "Hybrid BCI control of a robotic arm", "EEG-based brain-computer interface combined with eye tracking to control a Kinova Jaco2 for people with locked-in syndrome. 72.2% BCI accuracy.", "BSc, 5th semester"],
-  ["2023", "5-bar parallel crack sealing robot", "Dynamic model in MATLAB and a 3D printed, torque-controlled prototype for sealing road cracks.", "BSc, 4th semester"],
-  ["2022", "Apple tree detection for precision spraying", "Canopy detection and size estimation with OpenCV and an Intel RealSense camera. With TeeJet.", "BSc, 3rd semester"],
-  ["2022", "Cobot for torsion spring handling", "Pick-and-place cell with a UR5 and custom kinematics in Python. With Hagens Spring Group.", "BSc, 2nd semester"],
+  [
+    "2025",
+    "UNS-driven modular demonstrator",
+    "Small-batch production line on B&R ACOPOS 6D levitating shuttles, with multi-shuttle path planning (A*, conflict-based search), in-process anomaly detection and predictive maintenance.",
+    "MSc, 8th semester",
+  ],
+  [
+    "2025",
+    "Screw type detection on Jetson Nano",
+    "Real-time detection and classification of four screw types, from data capture and labelling to deployment on the device.",
+    "Applied Machine Vision",
+  ],
+  [
+    "2024",
+    "3D scanning of carbon composites",
+    "Prototype scanning vehicle and error-detection software for quality control of wind turbine blade beams. With Siemens Gamesa.",
+    "MSc, 7th semester",
+  ],
+  [
+    "2023",
+    "Hybrid BCI control of a robotic arm",
+    "EEG-based brain-computer interface combined with eye tracking to control a Kinova Jaco2 for people with locked-in syndrome. 72.2% BCI accuracy.",
+    "BSc, 5th semester",
+  ],
+  [
+    "2023",
+    "5-bar parallel crack sealing robot",
+    "Dynamic model in MATLAB and a 3D printed, torque-controlled prototype for sealing road cracks.",
+    "BSc, 4th semester",
+  ],
+  [
+    "2022",
+    "Apple tree detection for precision spraying",
+    "Canopy detection and size estimation with OpenCV and an Intel RealSense camera. With TeeJet.",
+    "BSc, 3rd semester",
+  ],
+  [
+    "2022",
+    "Cobot for torsion spring handling",
+    "Pick-and-place cell with a UR5 and custom kinematics in Python. With Hagens Spring Group.",
+    "BSc, 2nd semester",
+  ],
 ];

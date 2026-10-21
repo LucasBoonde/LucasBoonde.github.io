@@ -81,7 +81,8 @@ function renderCase(p) {
     const fig = el("figure", "case__cover");
     const img = el("img");
     img.src = p.cover;
-    img.alt = p.gallery[0] ? p.gallery[0][1] : p.title;
+    const match = p.gallery.find(([src]) => src === p.cover);
+    img.alt = match ? match[1] : p.title;
     fig.append(img);
     inner.append(fig);
   }
@@ -110,16 +111,30 @@ function renderCase(p) {
   grid.append(facts, body);
   inner.append(grid);
 
-  const rest = p.gallery.slice(p.cover ? 1 : 0);
+  // The cover is already shown above, so leave it out of the gallery.
+  const rest = p.gallery.filter(([src]) => src !== p.cover);
   if (rest.length) {
     const gal = el("div", "case__gallery");
     rest.forEach(([src, caption]) => {
       const fig = el("figure");
-      const img = el("img");
-      img.src = src;
-      img.alt = caption;
-      img.loading = "lazy";
-      fig.append(img, el("figcaption", null, caption));
+      let media;
+      if (src.endsWith(".mp4")) {
+        media = el("video");
+        media.src = src;
+        media.muted = true;
+        media.loop = true;
+        media.autoplay = true;
+        media.playsInline = true;
+        media.controls = true;
+        media.preload = "metadata";
+        media.setAttribute("aria-label", caption);
+      } else {
+        media = el("img");
+        media.src = src;
+        media.alt = caption;
+        media.loading = "lazy";
+      }
+      fig.append(media, el("figcaption", null, caption));
       gal.append(fig);
     });
     inner.append(gal);
